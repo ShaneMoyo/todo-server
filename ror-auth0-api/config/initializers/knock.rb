@@ -20,7 +20,7 @@ Knock.setup do |config|
   # config.token_audience = nil
 
   ## If using Auth0, uncomment the line below
-  config.token_audience = -> { Rails.application.secrets.auth0_client_id }
+  config.token_secret_signature_key = -> { Rails.application.secrets.auth0_client_secret }
 
   ## Signature algorithm
   ## -------------------
